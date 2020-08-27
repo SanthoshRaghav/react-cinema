@@ -99,7 +99,7 @@ jobs:
 workflows:
   build_and_deploy:
     jobs:
-      - buld
+      - build
       - deploy-to-aws-s3:
           requires:
             - build
