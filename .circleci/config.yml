@@ -21,6 +21,7 @@ jobs:
           paths:
             - node_modules
           key: app-{{ checksum "package.json" }}
+
   deploy-to-aws-s3:
     docker:
       - image: circleci/node:12.18.0
@@ -56,6 +57,7 @@ jobs:
             else
               aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_DEV_BUCKET} --delete 
             fi
+            
   deploy-to-aws-cloudfront:
     docker:
       - image: circleci/node:12.18.0
