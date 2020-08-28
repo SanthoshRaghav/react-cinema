@@ -55,7 +55,7 @@ jobs:
       - checkout
       - *show-current-branch-name
       - *restore-cache
-      - run
+      - run:
           name: Run linting
           command: npm run lint
   prettier:
@@ -64,7 +64,7 @@ jobs:
       - checkout
       - *show-current-branch-name
       - *restore-cache
-      - run
+      - run:
           name: Run prettier check
           command: npm run prettier:check
   deploy-to-aws-s3:
