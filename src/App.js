@@ -7,7 +7,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className='app'>
-        <h1>Test</h1>
+        <h1>Redux </h1>
       </div>
     </Provider>
   );
